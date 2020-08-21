@@ -35,10 +35,26 @@ let dogList = [
 ];
 
 let catList = [
-    "ocicat cat breed",
-    "siberian cat breed",
-    "bengal cat",
-    "chartreux cat",
+    {
+        name: "ocicat cat breed",
+        region: "USA",
+        description: "gato feo"
+    },
+    {
+        name: "siberian cat breed",
+        region: "Rusia",
+        description: "gato feo"
+    },
+    {
+        name: "bengal cat",
+        region: "USA",
+        description: "gato bonito"
+    },
+    {
+        name: "charteaux cat breed",
+        region: "Francia",
+        description: "gato gordo"
+    },
 ];
 
 
@@ -56,7 +72,29 @@ categories.dogs.button.onclick = ()=> {
             <div>description:${dog.description}</div>
         </li>`;
     });
+
+    categories.cats.button.onclick = ()=> {
+        if(categories.cats.content.innerHTML){
+            categories.cats.content.innerHTML = '';
+    
+            return;
+        }
+        dogList.forEach(cat =>{
+            categories.cats.innerHTML += `<li>
+                <span>${cat.name}</span>
+                <div>region: ${cat.region}</div>
+                <div>description:${cat.description}</div>
+            </li>`;
+        });
 }
+
+
+
+
+
+
+
+
 
 
 /*dogList.forEach(dog =>{
