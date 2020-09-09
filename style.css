@@ -98,8 +98,16 @@ div{
         margin: 0 auto;
         font-size: 200%;
     }
+
+    #meme-image{
+        width: 10%;
+    }
+
+
+
     .element:hover{
         background-color: #fff;
         color: #000000;
+        transition: background-color o.5s ease;
     }
 }   
